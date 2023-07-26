@@ -17,3 +17,5 @@ Then create a 'Hello World' program using html markups.
 
  2. Rewrite the same program using Javascript.
  
+ 3. Inject React into our project using CDN links from:
+     https://legacy.reactjs.org/docs/cdn-links.html

@@ -10,8 +10,10 @@
 
 Thinks to do:
 
--A basic HTML program using emmet.
+1. A basic HTML program using emmet.
 html:5 ↵ or ! ↵
 It will generate an HTML boilerplate code.
 Then create a 'Hello World' program using html markups.
 
+ 2. Rewrite the same program using Javascript.
+ 

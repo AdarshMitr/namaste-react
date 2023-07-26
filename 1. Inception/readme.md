@@ -8,7 +8,7 @@
  2. VS Code (IDE)
 
 
-Thinks to do:
+Things to do:
 
 1. A basic HTML program using emmet.
 html:5 ↵ or ! ↵
@@ -19,3 +19,6 @@ Then create a 'Hello World' program using html markups.
  
  3. Inject React into our project using CDN links from:
      https://legacy.reactjs.org/docs/cdn-links.html
+
+--------------------------------------------------------------------------------------------------------------------------
+ 4. Again write a 'Hello World' program. Use "React.createElement()" and "ReactDom.createRoot()" this time.

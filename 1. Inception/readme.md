@@ -31,3 +31,10 @@ Things to do:
 
 6.  Now create nested elements and siblings using 'React.createElement'. 
     It is painful. That's why JSX is used to ease this.  
+
+--------------------------------------------------------------------------------------------------------------------------
+ Order of <script> files matters a lot. Improper sequence causes an error in loading the file. Place script file of CDN before 'App.js' file in sequence as 'react' must be loaded before executing the code.
+ Always place 'App.js' file just before the closing </body> tag.
+
+ When 'root.render();' executes, it will replace everything of the div having 'root' tag with react code.
+ 

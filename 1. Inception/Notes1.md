@@ -1,6 +1,6 @@
-# Namaste React webseries (Episode-1) 🚀
+# Namaste React webseries  🚀
 
-     **----------Inception----------**
+## Episode-1 (Inception)
 
 
 

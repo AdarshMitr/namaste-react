@@ -14,5 +14,8 @@
     "react"
   ],
   "author": "Adarsh Kumar Patel",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
 }

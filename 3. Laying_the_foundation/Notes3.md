@@ -50,3 +50,31 @@
               </code>
 
 --------------------------------------------------------------------------------------------------------------------------
+
+      React Component: In react, components can be created by two ways.
+        1. Class Based Components (older way to create)
+        2. Function Based Components (newer way to create)
+
+*  Create React Component (Functional Component)
+    - functions that returns JSX element are React components.
+    - Name start with capital letter
+    - e.g. <code>
+              const HeadingComponent=()=>{
+              return <h1>Namaste React functional component</h1>;
+              }
+            </code>
+    -  We can skip return and curly braces if we have just one line of code to return as:
+            <code>
+              const HeadingComponent=()=><h1>Namaste React functional component</h1>
+            </code>
+    -  We can write mulit-line function code enclosed with small bracket as:
+            <code>
+            const HeadingComponent=()=>(<h1>Namaste React functional component</h1>); 
+            </code>       
+
+    -   Functional Components are rendere like this:
+          - <code>
+          root.render(<HeadingComponent/>);
+            </code>
+
+    

@@ -1,9 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+
+const hello=<h4> 👋 Hello! from the universe.</h4>
+
+ // injecting react element inside other react element 
+const elem= <span>I am element</span>;
+
 const Title = () => (
   <h1 id="heading" className="head">
+    {elem} -
     Namaste React using JSX 🚀
+    
   </h1>
 );
 
@@ -18,8 +26,12 @@ const HeadingComponent = () => (
 
     <Title />
     <h1 className="heading">
-      Namaste<h3>{500 + 499}</h3> times to React functional component
+      Namaste {500 + 499} times to React functional component
     </h1>
+
+    {/* injecting react element inside JSX */}
+    {hello}
+
   </div>
 );
 

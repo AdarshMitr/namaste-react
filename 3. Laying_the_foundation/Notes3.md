@@ -80,4 +80,6 @@
     -   Nesting component one inside other.
         - This is component composition.
 
-    -   We can write any javascript expression inside JSX using {}.
+    -   We can write any javascript expression inside JSX  using {}.
+    -   Writing react element inside JSX using {}.
+    -   Writing react element inside another react element using {}.

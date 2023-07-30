@@ -4,6 +4,8 @@
   "description": "This is a react app by Adarsh Kumar Patel",
   
   "scripts": {
+    "start":"parcel index.html",
+    "build":"parcel build index.html",
     "test": "jest"
   },
   "repository": {

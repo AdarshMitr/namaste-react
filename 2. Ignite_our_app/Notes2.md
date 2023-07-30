@@ -52,11 +52,9 @@
 
 --------------------------------------------------------------
 *   Make app compatible with older browsers
-    - in "package.json", add 'brosersList" as for example:
+    - in "package.json", add 'browserslist" as for example:
     <code>
-
-
-    "browsersList" :[
+    "browserslist" :[
        "last 2 chrome versions"
     ] 
 </code>

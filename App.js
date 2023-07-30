@@ -8,22 +8,12 @@ import ReactDOM from "react-dom/client";
 
 const heading = <h1 id="heading" className="head">Namaste React using JSX</h1>;
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(heading);
-
-console.log(heading);
-
 //React  Functional Component
 
 const HeadingComponent=()=>{
     return <h1>Namaste React functional component</h1>;
 }
 
-/*
-//without using return and curly braces but using small bracket
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const HeadingComponent2=()=>(
-    <h1>Namaste React functional component 2</h1>
-)
-*/
+root.render(<HeadingComponent/>);

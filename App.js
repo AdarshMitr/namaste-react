@@ -7,12 +7,19 @@ const Title = () => (
   </h1>
 );
 
-//Nesting component one inside other:
+//Nesting component one inside other:(Component composition)
 
+const number = 5000;
 const HeadingComponent = () => (
   <div id="container">
-    <Title/>
-    <h1 className="heading">Namaste React functional component</h1>
+    {/* injecting js expression inside JSX */}
+
+    <h2>{number}</h2>
+
+    <Title />
+    <h1 className="heading">
+      Namaste<h3>{500 + 499}</h3> times to React functional component
+    </h1>
   </div>
 );
 

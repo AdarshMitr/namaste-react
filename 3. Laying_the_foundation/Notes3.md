@@ -77,4 +77,7 @@
           root.render(<HeadingComponent/>);
             </code>
 
-    
+    -   Nesting component one inside other.
+        - This is component composition.
+
+    -   We can write any javascript expression inside JSX using {}.

@@ -1,26 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+//React Element
+
+const heading= React.createElement("h1",{id:"heading"},"Namaste React");
+const root=ReactDOM.createRoot(document.getElementById('root'));
+
+// React Element using JSX
+
+const jsxHeading=<h1 id="heading">Namaste React using JSX</h1>
+root.render(jsxHeading);
+//root.render(heading);
+
+console.log(heading);
+console.log(jsxHeading);
 
 
-// const heading= React.createElement('h1',{id:'heading'},'Hello World from React');
-
-//creating nested element and sibling element using React.createElement();
-
-const parent= React.createElement(
-    'div',{id:'parent'},[React.createElement('div',{id:'child'}),
-    [React.createElement('h1',{id:'heading'},'Hello World from h1'),
-    React.createElement('h2',{id:'heading'},'Hello World from h2')],
-
-
-    React.createElement('div',{id:'child2'}),
-    [React.createElement('h1',{id:'heading'},'Hello World from h1'),
-    React.createElement('h2',{id:'heading'},'Hello World from h2')]
-]
-);
-
-
-console.log(parent);
-const root= ReactDOM.createRoot(document.getElementById('root'));
-root.render(parent);
 

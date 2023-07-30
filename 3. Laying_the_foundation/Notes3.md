@@ -83,3 +83,5 @@
     -   We can write any javascript expression inside JSX  using {}.
     -   Writing react element inside JSX using {}.
     -   Writing react element inside another react element  using {}.
+    -   We can also call a function inside {}.
+    -   Components are reusable in react. They can be used any number of times.

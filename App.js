@@ -1,40 +1,32 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Logo from "./Logo.png";
 
+// Creating Food Ordering App
 
-const hello=<h4> 👋 Hello! from the universe.</h4>
-
- // injecting react element inside other react element 
-const elem= <span>I am element</span>;
-
-const Title = () => (
-  <h1 id="heading" className="head">
-    {elem} -
-    Namaste React using JSX 🚀
-    
-  </h1>
-);
-
-//Nesting component one inside other:(Component composition)
-
-const number = 5000;
-const HeadingComponent = () => (
-  <div id="container">
-    {/* injecting js expression inside JSX */}
-
-    <h2>{number}</h2>
-
-    <Title />
-    <h1 className="heading">
-      Namaste {500 + 499} times to React functional component
-    </h1>
-
-    {/* injecting react element inside JSX */}
-    {hello}
-
+const Header = () => {
+  return <div className="header">
+    <div id="logo-container">
+      <img id="logo" src={Logo}/>
+    <div className="nav-items">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Cart</li>
+      </ul>
+    </div>
   </div>
-);
+  </div>
+};
+
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<HeadingComponent />);
+root.render(<AppLayout />);

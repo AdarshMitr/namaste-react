@@ -35,11 +35,11 @@
 
 *   create React Element using JSX syntax
 
-    - 
-        <code>
+    
+        ```
               const jsxHeading=<h1 id="heading">Namaste React using JSX</h1>
               root.render(jsxHeading);
-        </code>
+        ```
     - It is much cleaner than 'React.createElement();' syntax. It is more readable and easy to write.
     - The result will be the same as earlier if we use JSX syntax.
     - In JSX, to add a class we have to write ".className" in camel case.There are some other attributes which also use  camel casing.
@@ -48,6 +48,7 @@
               (<h1 className="head">
               Namaste React by JSX
               </h1>)
+
               ```
 
 --------------------------------------------------------------------------------------------------------------------------
@@ -59,10 +60,12 @@
 *  Create React Component (Functional Component)
     - functions that returns JSX element are React components.
     - Name start with capital letter
+
     - e.g. ```
               const HeadingComponent=()=>{
               return <h1>Namaste React functional component</h1>;
               }
+
             ```
     -  We can skip return and curly braces if we have just one line of code to return as:
             ```
@@ -74,7 +77,8 @@
             ```      
 
     -   Functional Components are rendere like this:
-          - ```
+
+            ```
           root.render(<HeadingComponent/>);
             ```
 

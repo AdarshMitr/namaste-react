@@ -30,20 +30,19 @@ const RestaurantCard = (props) => {
       <img
         className="res-logo"
         alt="res-logo"
-        src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+resData.restaurants[0].info.cloudinaryImageId}
+        src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+resData.info.cloudinaryImageId}
       />
-      <h3>{resData.restaurants[0].info.name}</h3>
-      <h4>{resData.restaurants[0].info.cuisines.join(', ')}</h4>
-      <h4>{resData.restaurants[0].info.avgRating} stars</h4>
-      <h4>{resData.restaurants[0].info.costForTwo}</h4>
-      <h4>{resData.restaurants[0].info.sla.deliveryTime} minutes</h4>
+      <h3>{resData.info.name}</h3>
+      <h4>{resData.info.cuisines.join(', ')}</h4>
+      <h4>{resData.info.avgRating} stars</h4>
+      <h4>{resData.info.costForTwo}</h4>
+      <h4>Delivery Time:{resData.info.sla.deliveryTime} minutes</h4>
     </div>
   );
 };
 // Restaurant Data
 
-const resObj = {
-  restaurants: [
+const resList = [
     {
       info: {
         id: "651214",
@@ -808,15 +807,20 @@ const resObj = {
       },
       widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
     },
-  ],
-};
+  ];
 
 const Body = () => {
   return (
     <div className="body">
       <div className="search">Search</div>
       <div className="res-container">
-        <RestaurantCard resData={resObj} />
+        <RestaurantCard resData={resList[0]} />
+        <RestaurantCard resData={resList[1]} />
+        <RestaurantCard resData={resList[2]} />
+        <RestaurantCard resData={resList[3]} />
+        <RestaurantCard resData={resList[4]} />
+        <RestaurantCard resData={resList[5]} />
+        <RestaurantCard resData={resList[6]} />
       </div>
     </div>
   );

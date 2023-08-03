@@ -818,7 +818,7 @@ const Body = () => {
         {/* using map to iterate over resList elements */}
 
        { resList.map((restaurant)=>(
-<RestaurantCard resData={restaurant}/>
+<RestaurantCard key={restaurant.info.id}resData={restaurant}/>
         ))
         };
      

@@ -24,18 +24,18 @@ const Header = () => {
 
 const RestaurantCard = (props) => {
   const {resData } = props;
-  
+  const {cloudinaryImageId,name,cuisines,costForTwo,avgRating,} = resData?.info //optional chaining
   return (
     <div className="res-card" style={{ backgroundColor: "white" }}>
       <img
         className="res-logo"
         alt="res-logo"
-        src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+resData.info.cloudinaryImageId}
+        src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId}
       />
-      <h3>{resData.info.name}</h3>
-      <h4>{resData.info.cuisines.join(', ')}</h4>
-      <h4>{resData.info.avgRating} stars</h4>
-      <h4>{resData.info.costForTwo}</h4>
+      <h3>{name}</h3>
+      <h4>{cuisines.join(', ')}</h4>
+      <h4>{avgRating} stars</h4>
+      <h4>{costForTwo}</h4>
       <h4>Delivery Time:{resData.info.sla.deliveryTime} minutes</h4>
     </div>
   );
@@ -814,13 +814,16 @@ const Body = () => {
     <div className="body">
       <div className="search">Search</div>
       <div className="res-container">
-        <RestaurantCard resData={resList[0]} />
-        <RestaurantCard resData={resList[1]} />
-        <RestaurantCard resData={resList[2]} />
-        <RestaurantCard resData={resList[3]} />
-        <RestaurantCard resData={resList[4]} />
-        <RestaurantCard resData={resList[5]} />
-        <RestaurantCard resData={resList[6]} />
+
+        {/* using map to iterate over resList elements */}
+
+       { resList.map((restaurant)=>(
+<RestaurantCard resData={restaurant}/>
+        ))
+        };
+     
+        
+        
       </div>
     </div>
   );

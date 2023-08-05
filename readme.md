@@ -41,3 +41,17 @@
   
   
 
+<u>Two types of Export/Import:</u>
+-  export default Component;
+-  import Component from "path";
+
+-  export const Component;
+-  import {Component} from "path";
+  
+
+
+#  React Hooks
+   -  Normal Javascript utility functions
+      -  useState(); _Superpowrful State variable
+      -  useEffect()
+      -  

@@ -52,6 +52,6 @@
 
 #  React Hooks
    -  Normal Javascript utility functions
-      -  useState(); _Superpowrful State variable
+      -  useState(); - Superpowrful State variable
       -  useEffect()
       -  

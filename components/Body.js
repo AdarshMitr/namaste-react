@@ -1,12 +1,11 @@
 import React  from "react";
 import RestaurantCard from "./RestaurantCard";
-import resList from "../utils/mockData";
 import { useState, useEffect} from "react";
  
 const Body = () => {
 
   // Local State Variable-super powerful variable
-  const [listOfRestaurants,setListOfRestaurants] = useState(resList);
+  const [listOfRestaurants,setListOfRestaurants] = useState([]);
 
   useEffect(()=>{
    fetchData();
@@ -23,7 +22,8 @@ const fetchData=async()=>{
   //Optional Chaining
 
   setListOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-}
+};
+
     return (
       <div className="body">
         <div className="filter">

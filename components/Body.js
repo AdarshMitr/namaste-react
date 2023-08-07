@@ -24,6 +24,13 @@ const fetchData=async()=>{
   setListOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 };
 
+//adding a loading screen when list is empty
+
+if(listOfRestaurants.length===0){
+  return <h1> Loading..........</h1>
+}
+
+
     return (
       <div className="body">
         <div className="filter">

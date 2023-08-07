@@ -19,7 +19,10 @@ const fetchData=async()=>{
 
   const json=await data.json();
   console.log(json);
-  setListOfRestaurants(json.data.cards[5].card.card.gridElements.infoWithStyle.restaurants)
+
+  //Optional Chaining
+
+  setListOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 }
     return (
       <div className="body">

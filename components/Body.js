@@ -25,14 +25,10 @@ const fetchData=async()=>{
   setListOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 };
 
-//Conditional Rendering (*here Shimmer UI)
-
-if(listOfRestaurants.length === 0 || listOfRestaurants.length ==='undefined'){
-  return <Shimmer/>
-}
 
 
-    return (
+
+    return listOfRestaurants?.length === 0 ? <Shimmer/>:(
       <div className="body">
         <div className="filter">
           <button className="filter-btn" onClick={()=>{const filteredList=listOfRestaurants.filter((res)=>res.info.avgRating > 4)
@@ -43,7 +39,7 @@ if(listOfRestaurants.length === 0 || listOfRestaurants.length ==='undefined'){
   
           {/* using map to iterate over resList elements */}
   
-         { listOfRestaurants.map((restaurant)=>(
+         { listOfRestaurants?.map((restaurant)=>(
   <RestaurantCard key={restaurant.info.id}resData={restaurant}/>
           ))
           }

@@ -1,7 +1,8 @@
 import React  from "react";
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect} from "react";
- 
+import Shimmer from "./Shimmer"; 
+
 const Body = () => {
 
   // Local State Variable-super powerful variable
@@ -24,10 +25,10 @@ const fetchData=async()=>{
   setListOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 };
 
-//adding a loading screen when list is empty
+//Conditional Rendering (*here Shimmer UI)
 
-if(listOfRestaurants.length===0){
-  return <h1> Loading..........</h1>
+if(listOfRestaurants.length === 0 || listOfRestaurants.length ==='undefined'){
+  return <Shimmer/>
 }
 
 

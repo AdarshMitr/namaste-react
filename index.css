@@ -3,9 +3,9 @@
   padding: 0;
 }
 
- #wait{
+#wait {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
 }
 .header {
   display: flex;
@@ -13,60 +13,75 @@
   border: 1px solid rgb(0, 0, 0);
 }
 
-.logo-container{
+.logo-container {
   display: flex;
   margin: 10px;
 }
 
 #logo {
- 
-  height:60px;
+  height: 60px;
   width: 120px;
 }
 
 .nav-items > ul {
   display: flex;
   list-style: none;
- 
 }
 
 .nav-items > ul > li {
   margin: 10px;
   padding: 10px;
   font-size: 20px;
-  font-weight:600;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 600;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-.search{
+.search {
   padding: 10px;
-   
 }
 
-.res-container{
+.res-container {
   display: flex;
   flex-wrap: wrap;
 }
-.res-card{
+.res-card {
   width: 250px;
   text-align: center;
   border-radius: 10px;
   margin-left: 5px;
- 
 }
 
-.res-card:hover{
+.res-card:hover {
   cursor: pointer;
   border: 1px solid black;
-
 }
-.res-logo{
-padding: 5px 20px;
- width: 80%;
- align-self: center;
+.res-logo {
+  padding: 5px 20px;
+  width: 80%;
+  align-self: center;
 }
 
-.filter-btn{
+.filter-btn {
   margin: 10px;
   cursor: pointer;
+}
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shimmer-card {
+  width: 250px;
+  height: 360px;
+  border-radius: 10px;
+  margin: 5px;
+  background-color: #f0f0f0;
+}
+.shimmer-in {
+  width: 240px;
+  height: 246px;
+margin: 5px;
+  align-self: center;
+  background-color: rgb(216, 214, 214);
 }

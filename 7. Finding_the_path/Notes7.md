@@ -27,7 +27,7 @@
         - add ```errorElement: <Error />``` in the "<AppLayout/>" path in "appRouter".
   
   ------------------------------------------------------------------------------------------------------------------------
-  * Creating Children Routes
+  * Creating Children Routes:
     - ```import {Outlet } from "react-router-dom";```
     - replace ```<Body/>``` with ```<Outlet />``` in "<AppLayout/>" Component.
     - Here "<Header/>" Component will remain intact as we need it on the top everytime.
@@ -37,4 +37,7 @@
       { path: "/about", element: <About /> },
       { path: "/contact", element: <Contact /> },
     ],```
-    -   
+  
+  ------------------------------------------------------------------------------------------------------------------------
+  * Creating Links to Pages:
+  - ```import { Link } from "react-router-dom";``` in Header Component.

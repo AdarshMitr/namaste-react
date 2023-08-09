@@ -9,7 +9,8 @@
       -  in 'App.js' 
         - ```import { createBrowserRouter } from "react-router-dom";```
             - ```const appRouter = createBrowserRouter([
-                { path: "/", element: <AppLayout /> },
+                { path: "/", element: <AppLayout />
+                errorElement: <Error/> },
                 { path: "/about", element: <About /> },
                 { path: "/contact", element: <Contact/> },
                 ]);```
@@ -18,3 +19,12 @@
         -   Provide this configuration as: ```root.render(<RouterProvider router={appRouter} />);```
   
   Now Routes start working 😊
+
+    -   Creating our own error page:
+        - In 'Error.js', ```import { useRouteError } from 'react-router-dom';```
+        - use ```const err=useRouteError();``` inside the Component.
+        - use ```{err.status}``` and ```{err.statusText}``` in return.
+        - add ```errorElement: <Error />``` in the "<AppLayout/> path in "appRouter".
+  
+  ------------------------------------------------------------------------------------------------------------------------
+  

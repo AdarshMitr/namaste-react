@@ -12,3 +12,8 @@
 10. What is Async and Await?
 11. What is the use of `const json= await data.json();` in getRestaurants();
     
+
+--------------------------------------------------------------
+#   Solution
+1. What is a Microservice?
+    Microservice is an architecture used in software development where an application is broken down into various smaller services. These services are developed and deployed independently and interact with each other through well defined APIs. All these smaller services have specific capabilities that form a complex application.

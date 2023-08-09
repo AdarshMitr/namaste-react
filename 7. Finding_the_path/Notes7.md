@@ -24,7 +24,17 @@
         - In 'Error.js', ```import { useRouteError } from 'react-router-dom';```
         - use ```const err=useRouteError();``` inside the Component.
         - use ```{err.status}``` and ```{err.statusText}``` in return.
-        - add ```errorElement: <Error />``` in the "<AppLayout/> path in "appRouter".
+        - add ```errorElement: <Error />``` in the "<AppLayout/>" path in "appRouter".
   
   ------------------------------------------------------------------------------------------------------------------------
-  
+  * Creating Children Routes
+    - ```import {Outlet } from "react-router-dom";```
+    - replace ```<Body/>``` with ```<Outlet />``` in "<AppLayout/>" Component.
+    - Here "<Header/>" Component will remain intact as we need it on the top everytime.
+    - Now, add "<Body/>","<About/>","<Contact/>" Components along with their path to children below "<AppLayout>"in "appRouter" as:
+          ```children: [
+      { path: "/", element: <Body /> },
+      { path: "/about", element: <About /> },
+      { path: "/contact", element: <Contact /> },
+    ],```
+    -   

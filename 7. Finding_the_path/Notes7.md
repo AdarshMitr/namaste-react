@@ -41,3 +41,26 @@
   ------------------------------------------------------------------------------------------------------------------------
   * Creating Links to Pages:
   - ```import { Link } from "react-router-dom";``` in Header Component.
+  - add links to tabs like this: ```<li><Link to="/contact">Contact</Link></li>```
+  - add links to Home and About tab also.
+
+
+  ------------------------------------------------------------------------------------------------------------------------
+  * Two types of Routing in web apps:
+    1. Client -Side Routing
+        - Not making network calls as Components are loaded initially
+        - Showing result faster (as only Components switch that are loaded already)
+  
+    2. Server -Side Routing
+        - Making network calls to get contents
+        - fetching data from server
+        - Result is shown after fetching
+--------------------------------------------------------------------------------------------------------------------------
+
+* Creating Dynamic Routes:
+  - Create RestaurantMenu page
+  - add route to it as:
+    -  ```{path: "/restaurants/:resId", element: <RestaurantMenu />,
+    },```
+    
+   

@@ -7,14 +7,15 @@ const RestaurantMenu = () => {
   }, []);
 
  const fetchMenu = async () => {
-    const data = await fetch("https://foodishhub.live/api/menu?id=693409");
+    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.4594965&lng=77.0266383&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING&restaurantId=${94736}");
+    
     const json = await data.json();
     console.log(json);
     setResInfo(json.data);
   };
 
-  const { name, cuisines, costForTwoMessage } =
-    resInfo?.cards[0]?.card?.card?.info;
+  // const { name, cuisines, costForTwoMessage } =
+  //   resInfo?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants[0]?.info;
 
   return resInfo == null ? (
     <Shimmer />

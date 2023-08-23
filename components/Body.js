@@ -78,7 +78,7 @@ const Body = () => {
         {/* using map to iterate over resList elements */}
 
         {filteredRestaurant?.map((restaurant) => (
-          <Link key={restaurant.info.id} to={"/restaurants/"+restaurant.info.id}><RestaurantCard  resData={restaurant} /></Link>
+          <Link className="link" key={restaurant.info.id} to={"/restaurants/"+restaurant.info.id}><RestaurantCard  resData={restaurant} /></Link>
         ))}
       </div>
     </div>

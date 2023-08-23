@@ -8,7 +8,7 @@ const RestaurantMenu = () => {
 
   const fetchMenu = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.4594965&lng=77.0266383&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.7272832&lng=77.3370089&restaurantId=32128&catalog_qa=undefined&submitAction=ENTER"
     );
 
     const json = await data.json();
@@ -16,19 +16,25 @@ const RestaurantMenu = () => {
     setResInfo(json.data);
   };
 
-  if (resInfo == null) return <Shimmer />;
+  if (resInfo === null) return <Shimmer />;
 
-  const { name, cuisines, costForTwo } =
-  resInfo?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants[2]?.info;
+  const { name, cuisines, costForTwoMessage } =
+  resInfo?.cards[0]?.card?.card?.info;
+  const {itemCards}=resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
+  console.log(itemCards);
+
   return (
     <div>
       <h1>{name}</h1>
-      <h3>{cuisines.toString()}</h3>
-      <h3>{costForTwo}</h3>
+      <h3>{cuisines.join(",")} - {costForTwoMessage} </h3>
+      
       <ul>
-        <li>Chole Bhature</li>
-        <li>Paneer Pakode</li>
-        <li>Soyabean Chap</li>
+        <li>{itemCards[0].card.info.name}</li>
+        <li>{itemCards[1].card.info.name}</li>
+        <li>{itemCards[2].card.info.name}</li>
+        <li>{itemCards[3].card.info.name}</li>
+        <li>{itemCards[4].card.info.name}</li>
+        <li>{itemCards[5].card.info.name}</li>
       </ul>
     </div>
   );

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from 'react-router-dom';
 const RestaurantMenu = () => {
   const [resInfo, setResInfo] = useState(null);
   useEffect(() => {
@@ -29,12 +30,8 @@ const RestaurantMenu = () => {
       <h3>{cuisines.join(",")} - {costForTwoMessage} </h3>
       
       <ul>
-        <li>{itemCards[0].card.info.name}</li>
-        <li>{itemCards[1].card.info.name}</li>
-        <li>{itemCards[2].card.info.name}</li>
-        <li>{itemCards[3].card.info.name}</li>
-        <li>{itemCards[4].card.info.name}</li>
-        <li>{itemCards[5].card.info.name}</li>
+      {itemCards.map(item=><li>{item.card.info.name}</li>)}
+        
       </ul>
     </div>
   );

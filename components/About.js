@@ -1,8 +1,14 @@
-
-const About=()=>{
-    return (
-        <h1>This is About page of Food Fire</h1>
-    )
+import User from "./User";
+import UserClass from "./UserClass";
+const About = (props) => {
+  return (
+    <div>
+      <h1>About</h1>
+      <h2>This is Namaste React Web Series</h2>
+      <User name='Adarsh' location='Gurugram' contact='@AdarshMitr'/>
+      <User name='Ashish' location='Rohtak' contact='@AapkaAshish'/>
+    </div>
+  );
 };
 
 export default About;

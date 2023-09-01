@@ -4,34 +4,47 @@ class UserClass extends React.Component {
   constructor(props) {
     super(props);
     console.log(props);
-    this.state={
-        count:0,
-        count2:6
-    }
-    console.log('child constructor'+this.props.name)
+    this.state = {
+      userInfo:{
+name:'xyz',
+location:'Default',
+avatar_url:'https://dummyimage.com/300',
+      },
+    };
+    //console.log("child constructor" + this.props.name);
   }
 
-  componentDidMount(){
-     console.log('child componentDidMount'+this.props.name)
+  async componentDidMount() {
+    //console.log("child componentDidMount" + this.props.name);
+    //API calls
+    const data=await fetch('https://api.github.com/users/adarshmitr');
+    const json=await data.json();
+    this.setState(
+  {
+    userInfo:json,
+  }
+    )
+    console.log(json);
+  }
+  componentDidUpdate(){
+    console.log('component did update')
+  }
+  componentWillUnmount(){
+    console.log('component will unmount')
   }
   render() {
-    console.log('child render'+this.props.name)
-    const {name, location, contact} = this.props;
+   
+    //console.log("child render" + this.props.name);
+    const {name,location,avatar_url}=this.state.userInfo;
+    
     return (
       <div className="user-card">
+        <img src={avatar_url}/>
         <h2>Name: {name} (from class)</h2>
         <h3>Location: {location} </h3>
-        <h3>Contact:{contact}</h3>
-        <h3>Count:{this.state.count}</h3>
-        <button onClick={()=>{
-            //Never update state variable directly 
-            this.setState({count:this.state.count+1})
-        }}>increment+</button>
-        <h3>Count2:{this.state.count2}</h3>
-        <button onClick={()=>{
-          this.setState({count2:this.state.count2+6})
-        }}>Increment+6</button>
-      </div>
+
+        
+              </div>
     );
   }
 }

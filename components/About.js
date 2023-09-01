@@ -22,8 +22,10 @@ class About extends Component{
         
         <h1>About</h1>
         <h2>This is Namaste React Web Series</h2>
-        <User name='Adarsh' location='Gurugram' contact='@AdarshMitr'/>
+      
         <UserClass name='Ashish' location='Rohtak' contact='@AapkaAshish'/>
+        <UserClass name='Amit' location='Rewari' contact='@amit1234'/>
+        <UserClass name='Rakesh' location='Chandigarh' contact='@raka678'/>
       </div>
     );
   }

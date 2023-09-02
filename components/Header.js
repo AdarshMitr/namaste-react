@@ -5,7 +5,7 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
   const [loginBtn, setLoginBtn] = useState("Login");
-  const onlineStatus=useOnlineStatus();
+  const onlineStatus = useOnlineStatus();
   return (
     <div div className="header">
       <div className="logo-container">
@@ -26,6 +26,11 @@ const Header = () => {
           <li>
             <Link className="link" to="/contact">
               Contact
+            </Link>
+          </li>
+          <li>
+            <Link className="link" to="/grocery">
+              Grocery
             </Link>
           </li>
           <li>Cart</li>

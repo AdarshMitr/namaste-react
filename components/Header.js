@@ -7,12 +7,12 @@ const Header = () => {
   const [loginBtn, setLoginBtn] = useState("Login");
   const onlineStatus = useOnlineStatus();
   return (
-    <div div className="header">
-      <div className="logo-container">
-        <img id="logo" src={Logo} />
+    <div className="header flex">
+      <div className="flex w-56">
+        <img src={Logo} />
       </div>
-      <div className="nav-items">
-        <ul>
+      <div className="nav-items flex items-center">
+        <ul className="flex">
           <li>
             <Link className="link" to="/">
               Home

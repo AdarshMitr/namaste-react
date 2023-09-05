@@ -2,7 +2,7 @@ import React from "react";
 import { CDN_URL } from "../utils/constants";
 
 export default function ItemList({ items }) {
-  console.log(items);
+  //console.log(items);
   return (
     <>
       {items.map((item) => (

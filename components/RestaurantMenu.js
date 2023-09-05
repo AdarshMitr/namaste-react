@@ -31,7 +31,7 @@ const resInfo=useRestaurantMenu(resId);
         {cuisines.join(",")} - {costForTwoMessage}{" "}
       </p>
       {/* categories: accordion */}
-      {categories.map((category)=><RestaurantCategory data={category?.card?.card}/>)}
+      {categories.map((category)=><RestaurantCategory key={category?.card?.card?.title} data={category?.card?.card}/>)}
 </div>
       
   );

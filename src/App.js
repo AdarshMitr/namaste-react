@@ -29,7 +29,7 @@ useEffect(()=>{
 },[]);
 
   return (
-    <UserContext.Provider value={{loggedinUser:userName}}>
+    <UserContext.Provider value={{loggedinUser:userName,setUserName}}>
  <div className="app">
       <Header />
       <Outlet />

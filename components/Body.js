@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { useContext } from "react";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   // Local State Variable-super powerful variable
@@ -11,7 +13,6 @@ const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
   //console.log(listOfRestaurants);
-  
 
   useEffect(() => {
     fetchData();
@@ -45,13 +46,14 @@ const Body = () => {
       </h1>
     );
 
+    const {loggedinUser,setUserName}=useContext(UserContext);
+
   return listOfRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
       <div className="filter flex">
         <div className="search m-4 p-4 flex items-center">
-
           <input
             type="text"
             className="search-box border border-solid border-black"
@@ -77,20 +79,24 @@ const Body = () => {
           >
             Search
           </button>
-          <button
-          className="px-4 py-2 m-4 bg-gray-100"
-          onClick={() => {
-            const filteredList = listOfRestaurants.filter(
-              (res) => res.info.avgRating > 4
-            );
-            setFilteredRestaurant(filteredList);
-          }}
-        >
-          Top Rated Restaurants
-        </button>
-        </div>
+          <div className="px-4 py-2 m-4 bg-gray-100">
+            <button
+              onClick={() => {
+                const filteredList = listOfRestaurants.filter(
+                  (res) => res.info.avgRating > 4
+                );
+                setFilteredRestaurant(filteredList);
+              }}
+            >
+              Top Rated Restaurants
+            </button>
+          </div>
+          <div className="px-4 py-2 m-4 search">
+            <label>UserName :</label>
+           <input className="border border-black p-2" value={loggedinUser} onChange={(e)=>setUserName(e.target.value)}/>
+          </div>
 
-       
+        </div>
       </div>
       <div className="flex flex-wrap">
         {/* using map to iterate over resList elements */}

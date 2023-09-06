@@ -3,7 +3,7 @@ import React from "react";
 class UserClass extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
+    // console.log(props);
     this.state = {
       userInfo:{
 name:'xyz',
@@ -24,13 +24,13 @@ avatar_url:'https://dummyimage.com/300',
     userInfo:json,
   }
     )
-    console.log(json);
+    // console.log(json);
   }
   componentDidUpdate(){
-    console.log('component did update')
+    // console.log('component did update')
   }
   componentWillUnmount(){
-    console.log('component will unmount')
+    // console.log('component will unmount')
   }
   render() {
    

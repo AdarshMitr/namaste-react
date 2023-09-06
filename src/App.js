@@ -8,17 +8,34 @@ import About from "./../components/About";
 import Contact from "./../components/Contact";
 import Error from "../components/Error";
 import RestaurantMenu from "../components/RestaurantMenu";
+import { useState,useEffect } from "react";
+import UserContext from "../utils/UserContext";
 
 
 //lazy loading
 const Grocery=lazy(()=>import("../components/Grocery"));
 
 const AppLayout = () => {
+
+  const [userName,setUserName]=useState();
+
+  //authentication
+useEffect(()=>{
+  //Make an api call and send username and password
+  const data={
+    name:'Adarsh Kumar Patel'
+  };
+  setUserName(data.name);
+},[]);
+
   return (
-    <div className="app">
+    <UserContext.Provider value={{loggedinUser:userName}}>
+ <div className="app">
       <Header />
       <Outlet />
     </div>
+    </UserContext.Provider>
+   
   );
 };
 

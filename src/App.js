@@ -12,6 +12,7 @@ import { useState,useEffect } from "react";
 import UserContext from "../utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "../utils/appStore";
+import Cart from "../components/Cart";
 
 
 //lazy loading
@@ -55,6 +56,7 @@ const appRouter = createBrowserRouter([
       { path: "/contact", element: <Contact /> },
       { path: "/grocery", element: <Suspense fallback={<h1>Loading....</h1>}><Grocery /></Suspense> },
       { path: "/restaurants/:resId", element: <RestaurantMenu /> },
+      { path: "/cart", element: <Cart /> },
     ],
     errorElement: <Error />,
   },

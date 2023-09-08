@@ -54,12 +54,15 @@ console.log(cartItems);
           >
             {loginBtn}
           </button>
-          <li className="px-4 font-bold text-xl">Cart-({cartItems.length} items)</li>
+          <li className="px-4 font-bold text-xl">
+            <Link className="link" to="/cart">
+            Cart-({cartItems.length} items)
+            </Link></li>
           <li className="px-4 font-bold">{loggedinUser}</li>
         </ul>
       </div>
     </div>
   );  
-};
+}; 
 
 export default Header;

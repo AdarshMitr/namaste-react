@@ -43,7 +43,7 @@ console.log(cartItems);
             </Link>
           </li>
           
-          <li className="px-4 ">{onlineStatus ? "🟢 Online" : "🔴 Offline"}</li>
+          <li className="px-4 ">{onlineStatus ? "🟢nline" : "🔴ffline"}</li>
           <button
             className="login-btn px-4 "
             onClick={() => {

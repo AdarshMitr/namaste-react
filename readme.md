@@ -20,7 +20,7 @@
   - Different development and production bundles
 
 
-##  Food Fire
+##  Food Full
 
   * Header
      - Logo
@@ -54,4 +54,17 @@
    -  Normal Javascript utility functions
       -  useState(); - Superpowrful State variable
       -  useEffect()
-      -  
+
+
+
+
+
+
+#  Redux Toolkit
+      -  Install @reduxjs/toolkit and react-redux
+      -  Build our store
+      -  Connect our store to our App
+      -  Slice (CartSlice)
+      -  Dispatch (action)
+      -  Selector
+

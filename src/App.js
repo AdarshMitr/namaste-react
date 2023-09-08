@@ -10,6 +10,8 @@ import Error from "../components/Error";
 import RestaurantMenu from "../components/RestaurantMenu";
 import { useState,useEffect } from "react";
 import UserContext from "../utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "../utils/appStore";
 
 
 //lazy loading
@@ -29,12 +31,15 @@ useEffect(()=>{
 },[]);
 
   return (
-    <UserContext.Provider value={{loggedinUser:userName,setUserName}}>
+    <Provider store={appStore}>
+       <UserContext.Provider value={{loggedinUser:userName,setUserName}}>
  <div className="app">
       <Header />
       <Outlet />
     </div>
     </UserContext.Provider>
+    </Provider>
+   
    
   );
 };

@@ -9,5 +9,5 @@ expect(result).toBe(7);
 test(" Sum function should calculate the sum of two numbers",()=>{
     const result=sum(12,4);
     //Assertion
-    expect(result).toBe(10);
+    expect(result).toBe(16);
     });

@@ -1,0 +1,2 @@
+{"G:\\namaste-react\\components\\sum.js": {"path":"G:\\namaste-react\\components\\sum.js","statementMap":{"0":{"start":{"line":4,"column":2},"end":{"line":4,"column":13}}},"fnMap":{"0":{"name":"sum","decl":{"start":{"line":3,"column":9},"end":{"line":3,"column":12}},"loc":{"start":{"line":3,"column":18},"end":{"line":5,"column":1}},"line":3}},"branchMap":{},"s":{"0":2},"f":{"0":2},"b":{},"_coverageSchema":"1a1c01bbd47fc00a2c39e90264f33305004495a9","hash":"5f44b562947f3713254af0fef423bd97ffc1d729"}
+}

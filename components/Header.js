@@ -13,7 +13,7 @@ const Header = () => {
 
   //Subscribing to the store using Selector
 const cartItems=useSelector((store)=>store.cart.items);
-console.log(cartItems);
+//console.log(cartItems);
 
   return (
     <div className="header flex justify-between shadow-lg bg-orange-200 sm:bg-yellow-200 lg:bg-blue-200">
@@ -48,7 +48,7 @@ console.log(cartItems);
             className="login-btn px-4 "
             onClick={() => {
               loginBtn === "Login"
-                ? setLoginBtn("Log Out")
+                ? setLoginBtn("LogOut")
                 : setLoginBtn("Login");
             }}
           >

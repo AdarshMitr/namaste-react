@@ -1,0 +1,1 @@
+module.exports = "/src/Img/Logo.png";

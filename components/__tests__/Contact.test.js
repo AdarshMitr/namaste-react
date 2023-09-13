@@ -6,7 +6,25 @@ import "@testing-library/jest-dom";
 //describe ("",()=>{}) is a block used to group similar kind of test cases. We can create as many blocks as we need and even nest them for our convenience.
 // We can also write 'it' in place of 'test'.
 
+
+
 describe("Contact Us page test cases",()=>{
+
+beforeAll(()=>{
+  console.log("before all");
+})
+
+beforeEach(()=>{
+  console.log('before each')
+})
+
+afterAll(()=>{
+  console.log('after all');
+})
+
+afterEach(()=>{
+  console.log('after each')
+})
   it("Should load 'contact us' component",()=>{
     render(<Contact/>);
     

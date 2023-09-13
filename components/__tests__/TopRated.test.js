@@ -5,6 +5,7 @@ import { act } from "react-dom/test-utils";
 import { BrowserRouter } from "react-router-dom";
 import Body from "../Body";
 
+
 global.fetch=jest.fn(()=>{
     return Promise.resolve({
         json:()=>{return Promise.resolve(MOCK_DATA);}

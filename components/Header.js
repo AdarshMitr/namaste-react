@@ -16,7 +16,7 @@ const cartItems=useSelector((store)=>store.cart.items);
 //console.log(cartItems);
 
   return (
-    <div className="header flex justify-between shadow-lg bg-orange-200 sm:bg-yellow-200 lg:bg-blue-200">
+    <div className="header flex justify-between shadow-lg bg-orange-200 sm:bg-yellow-200 lg:bg-orange-200">
       <div >
         <img className="flex w-56"src={Logo} />
       </div>

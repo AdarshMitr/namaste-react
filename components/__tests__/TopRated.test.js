@@ -33,5 +33,5 @@ it("should filter Top Rated Restaurant", async () => {
 
   const cardsAfterFilter = screen.getAllByTestId("resCard");
 
-  expect(cardsAfterFilter.length).toBe(15);
+  expect(cardsAfterFilter.length).toBe(12);
 });

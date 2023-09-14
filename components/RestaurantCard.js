@@ -10,7 +10,7 @@ const RestaurantCard = (props) => {
     const{loggedinUser}=useContext(UserContext);
     const {cloudinaryImageId,name,cuisines,costForTwo,avgRating,deliveryTime} = resData?.info //optional chaining
     return (
-      <div data-testid="resCard" className="res-card m-4 p-4 w-[230px] bg-gray-100 hover:bg-gray-200 rounded-lg" >
+      <div data-testid="resCard" className="res-card m-4 p-4 w-[230px] bg-gray-100 hover:bg-gray-200 rounded-lg md:flex-row items-center" >
         <img
           className="res-logo rounded-lg"
           alt="res-logo"

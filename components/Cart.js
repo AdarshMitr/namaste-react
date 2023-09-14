@@ -16,7 +16,7 @@ const Cart=()=>{
         <div className="w-6/12 m-auto border-blue-600">
             <button className="p-2 m-2 bg-black text-white rounded-lg" onClick={handleClearCart}>Clear Cart</button>
            {cartItems.length===0 && <h1>Cart is Empty.Add items to the cart.</h1>} 
-        <ItemList items={cartItems}/>
+        <ItemList  items={cartItems}/>
         </div>
         </div>
        

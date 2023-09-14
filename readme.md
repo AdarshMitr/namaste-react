@@ -85,6 +85,6 @@
      - Install "@babel/preset-react" to enable JSX in test cases
      - Include @babel/preset-react inside babel config
      - Install npm i -D @testing-library/jest-dom
-     - 
+  
   
    

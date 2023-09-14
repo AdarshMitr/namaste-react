@@ -11,19 +11,19 @@ import "@testing-library/jest-dom";
 describe("Contact Us page test cases",()=>{
 
 beforeAll(()=>{
-  console.log("before all");
+  //console.log("before all");
 })
 
 beforeEach(()=>{
-  console.log('before each')
+  //console.log('before each')
 })
 
 afterAll(()=>{
-  console.log('after all');
+  //console.log('after all');
 })
 
 afterEach(()=>{
-  console.log('after each')
+  //console.log('after each')
 })
   it("Should load 'contact us' component",()=>{
     render(<Contact/>);
